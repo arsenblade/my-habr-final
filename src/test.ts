@@ -1,3 +1,3 @@
 export function some(value: number) {
-    console.log('testisfwfng', value);
+    console.log('teis1111ng', value);
 }
