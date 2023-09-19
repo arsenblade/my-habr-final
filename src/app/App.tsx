@@ -1,11 +1,10 @@
 import {Link, Route, Routes} from 'react-router-dom'
-import {MainAsync} from "./Main/MainAsync";
-import {AboutAsync} from "./About/AboutAsync";
 import {Suspense, useContext} from "react";
-import {Theme, ThemeContext} from "../theme/ThemeContext";
-import {set} from "husky";
 import {Button} from "@storybook/react/demo";
-import {useTheme} from "../theme/useTheme";
+import {useTheme} from "shared/lib/hooks/useTheme";
+import {classNames} from "shared/lib/helpers/ClassNames/ClassNames";
+import AboutAsync from "pages/About/ui/AboutAsync";
+import MainAsync from "pages/Main/ui/MainAsync";
 interface AppPropsInterface {
 
 }
@@ -14,7 +13,7 @@ export default function App({}: AppPropsInterface) {
     const {theme, toggleTheme} = useTheme()
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme || ''])}>
             <Link to={'/'}>Main</Link>
             <Link to={'/about'}>About</Link>
             <Button onClick={toggleTheme}>Toggle</Button>

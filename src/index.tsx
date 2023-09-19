@@ -1,13 +1,12 @@
 import {render} from "react-dom";
-import './styles/index.scss'
-import styles from './Module.module.scss'
-import App from "./pages/App";
+import 'app/styles/index.scss'
+import App from "app/App";
 import {BrowserRouter} from "react-router-dom";
-import ThemeProvider from "./theme/ThemeProvider";
+import ThemeProvider from "app/Providers/ThemeProvider/ThemeProvider";
 
 const domNode = document.getElementById('root');
 render(
-    <div className='test'>
+    <div>
         <BrowserRouter>
             <ThemeProvider>
                 <App />
