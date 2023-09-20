@@ -8,6 +8,7 @@ export default function buildResolvers(options: BuildOptions): ResolveOptions {
         extensions: ['.tsx', '.ts', '.js'],
         preferAbsolute: true,
         modules: [srcPath, 'node_modules'],
+        mainFiles: ['index'],
         alias: {}
     }
 }

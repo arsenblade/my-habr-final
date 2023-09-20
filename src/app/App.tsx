@@ -5,6 +5,7 @@ import {useTheme} from "shared/lib/hooks/useTheme";
 import {classNames} from "shared/lib/helpers/ClassNames/ClassNames";
 import AboutAsync from "pages/About/ui/AboutAsync";
 import MainAsync from "pages/Main/ui/MainAsync";
+import {AppRouter} from "app/provider/Router";
 interface AppPropsInterface {
 
 }
@@ -17,12 +18,7 @@ export default function App({}: AppPropsInterface) {
             <Link to={'/'}>Main</Link>
             <Link to={'/about'}>About</Link>
             <Button onClick={toggleTheme}>Toggle</Button>
-            <Suspense fallback={<div>...Lodaing</div>}>
-                <Routes>
-                    <Route path={'/about'} element={<AboutAsync />} />
-                    <Route path={'/'} element={<MainAsync />} />
-                </Routes>
-            </Suspense>
+            <AppRouter />
         </div>
     );
 };

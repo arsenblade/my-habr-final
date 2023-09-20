@@ -1,2 +1,2 @@
 // UI
-export {default as Main} from './ui/MainAsync'
+export {default as MainPage} from './ui/MainAsync'

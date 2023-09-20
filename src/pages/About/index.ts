@@ -1,2 +1,2 @@
 // UI
-export {default as About} from './ui/AboutAsync'
+export {default as AboutPage} from './ui/AboutAsync'
