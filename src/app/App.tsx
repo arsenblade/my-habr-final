@@ -6,6 +6,7 @@ import {classNames} from "shared/lib/helpers/ClassNames/ClassNames";
 import AboutAsync from "pages/About/ui/AboutAsync";
 import MainAsync from "pages/Main/ui/MainAsync";
 import {AppRouter} from "app/provider/Router";
+import {Navbar} from "widgets/Navbar";
 interface AppPropsInterface {
 
 }
@@ -15,8 +16,7 @@ export default function App({}: AppPropsInterface) {
 
     return (
         <div className={classNames('app', {}, [theme || ''])}>
-            <Link to={'/'}>Main</Link>
-            <Link to={'/about'}>About</Link>
+            <Navbar />
             <Button onClick={toggleTheme}>Toggle</Button>
             <AppRouter />
         </div>
